@@ -1,0 +1,1627 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=1170" />
+    <meta content="history" name="save" />
+    <link href="http://static.wanfangdata.com.cn/wfks/css/animate.min.css?v=201704270918" rel="stylesheet" />
+    <link href="http://static.wanfangdata.com.cn/wfks/css/global.min.css?v=201704270918" rel="stylesheet" />
+
+    <link href="/Content/search.min.css?v=201704270918" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9 ]><link href="http://static.wanfangdata.com.cn/wfks/css/ltie9.css?v=201704270918" rel="stylesheet" /><![endif]-->
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="apple-touch-icon" href="../favicon.ico" />
+    
+    <title>
+        万方数据知识服务平台
+        -论文检索结果</title>
+
+</head>
+<body>
+    <div class="header">
+        <div class="nav clear">
+            <a href="http://www.wanfangdata.com.cn/"><img class="logo" src="http://static.wanfangdata.com.cn/wfks/img/logo.png" alt="" /></a>
+	    <a href="http://www.wanfangdata.com.cn/" title="欢迎广大用户试用新版本" style="font-size: 18px;color: #2876d7;text-decoration: none;display: inline-block;margin: 6px 0 0 15px;">【新版入口】</a>
+            <ul>
+                <li class="active fixed" data-target="search-wrap">检索</li>
+                <li id="navResource" data-target="resource-wrap">资源</li>
+                <li id="navService" data-target="service-wrap">服务</li>
+                <li class="profile"></li>
+            </ul>
+        </div>
+        <div class="width-wrap search-wrap active fixed">
+            <div class="panel search-panel clear">
+                <div class="drp res-drp clear">
+                    <div class="res-lb">
+                        <span id="res" class="lb">学术论文</span>
+                        <i class="icon-more"></i>
+                    </div>
+                    <div class="res-list bd pop" data-open=".res-lb">
+                        <span class="clear-shadow"></span>
+                        <ul class="resource clear"></ul>
+                        <ul class="library clear"></ul>
+                    </div>
+                </div>
+                <input class="search-input" type="search" name="q" autocomplete="off" />
+                <div id="adSearchBtn" class="icon-search-ad" type="button">
+		<div class="search-ad pop">
+                    <a target="_blank" id="adSearchLink" href="http://librarian.wanfangdata.com.cn/">跨库检索</a>
+                    <a target="_blank" href="http://old.wanfangdata.com.cn/NewGuide?helpitem=searchepaper">检索帮助</a>
+                </div>
+		</div>
+                <button class="btn icon-search search-btn" type="submit"></button>
+                <div class="search-tip-field pop"></div>
+            </div>
+        </div>
+        <div class="width-wrap resource-wrap">
+            <div class="panel resource-panel"></div>
+        </div>
+        <div class="width-wrap service-wrap">
+            <div class="panel service-panel clear">
+                <div class="md">
+                    <div class="hd clear">
+                        <i class="icon icon-zzfu"></i>
+                        <h6 class="tt">增值服务</h6>
+                    </div>
+                    <div class="bd">
+                        <a target="_blank" href="http://social.old.wanfangdata.com.cn/">万方学术圈</a>
+                        <a target="_blank" href="http://trend.wanfangdata.com.cn/">知识脉络分析</a>
+                        <a target="_blank" href="http://librarian.wanfangdata.com.cn/">查新/跨库检索</a>
+                        <a target="_blank" href="http://librarian.wanfangdata.com.cn/ScientificLiterature">科技文献分析</a>                        
+                    </div>
+                </div>
+                <div class="md">
+                    <div class="hd clear">
+                        <i class="icon icon-gjlfu"></i>
+                        <h6 class="tt">工具类服务</h6>
+                    </div>
+                    <div class="bd">
+                        <a target="_blank" href="http://oldcheck.wanfangdata.com.cn/">论文相似性检测</a>
+                        <a target="_blank" href="http://stats.wanfangdata.com.cn/">国家经济统计数据库</a>
+                        <a target="_blank" href="http://patentool.wanfangdata.com.cn/">专利工具</a>
+                    </div>
+                </div>
+                <div class="md">
+                    <div class="hd clear">
+                        <i class="icon icon-bjbzyfu"></i>
+                        <h6 class="tt">编辑部专用服务</h6>
+                    </div>
+                    <div class="bd">
+                        <a target="_blank" href="http://stats.editors.wanfangdata.com.cn/">期刊统计分析与评价</a>
+                        <a target="_blank" href="http://old.wanfangdata.com.cn/ResourceDescription/DOI">中文DOI</a>
+                        <a target="_blank" href="http://publish.wanfangdata.com.cn/">优先出版</a>
+                        <a target="_blank" href="http://publish.wanfangdata.com.cn/Regular">同步出版</a>
+                        <a target="_blank" href="http://editors.wanfangdata.com.cn/">编审平台</a>
+                    </div>
+                </div>
+                <div class="md">
+                    <div class="hd clear">
+                        <i class="icon icon-zzzyff"></i>
+                        <h6 class="tt">作者专用服务</h6>
+                    </div>
+                    <div class="bd">
+                        <a target="_blank" href="http://old.wanfangdata.com.cn/UserService?tab=citenotice">引用通知</a>
+                        <a target="_blank" href="http://contribute.wanfangdata.com.cn/">投稿</a>
+                        <a href="#">OA论文托管</a>
+                    </div>
+                </div>
+                <div class="md last-md">
+                    <div class="hd clear">
+                        <i class="icon icon-yqzl"></i>
+                        <h6 class="tt">舆情专栏</h6>
+                    </div>
+                    <div class="bd">
+                        <a target="_blank" href="http://subject.wanfangdata.com.cn/">专题</a>
+                        <a target="_blank" href="http://message.wanfangdata.com.cn/">科技动态</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="width-wrap account-wrap">
+            <div class="panel account-panel clear">
+                <div class="top-link">
+                    <a class="login-link">登录</a>
+                    <a href="http://login.old.wanfangdata.com.cn/Register/Index" target="_blank">注册</a>
+                    <a href="http://login.old.wanfangdata.com.cn/Logout.aspx">退出</a>
+                </div>
+                <div class="account-container">
+                    <div class="account person-account">
+                        <i class="icon icon-point"></i>
+                        <span class="display-name"></span>
+                        <span class="my-link">
+                            <a target="_blank" href="http://old.wanfangdata.com.cn/UserService?tab=myorder">查看订单</a>
+                            <a target="_blank" href="http://old.wanfangdata.com.cn/UserService?tab=citenotice">引用通知</a>
+                            <a target="_blank" href="http://old.wanfangdata.com.cn/UserService?tab=mywallet">我的钱包</a>
+                            <a target="_blank" href="http://tran.wanfangdata.com.cn/Charge.aspx">充值</a>
+                            <a target="_blank" class="last-item" href="http://old.wanfangdata.com.cn/UserService?tab=edituser">个人信息管理</a>
+                        </span> <span style="color:red;margin-top:-25px;font-size:12px;">新版平台已经上线，充值操作将跳转，您的账户权限不会受到影响</span>
+                    </div>
+                    <div class="account group-account">
+                        <i class="icon icon-point"></i>
+                        <span class="display-name"></span>
+                        <span class="my-link">
+                            <a target="_blank" class="order-link" href="http://istic.wanfangdata.com.cn/Order">查看订单</a>
+                            <a target="_blank" class="last-item group-center" href="http://old.wanfangdata.com.cn/Organization">服务站</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content content-search clear">
+        <div class="left">
+            <div class="total-records">
+                
+    共检索到<span>640,841条</span>记录
+
+            </div>
+            
+    <div class="cluster">
+        
+<div class="md md-cluster">
+    
+    <div class="hd clear">
+        
+        <span class="title">出版状态</span>
+    </div>
+    <div class="bd">
+        
+                
+                
+                
+                    <p class="cluster-item publishState">
+                        <span class="unit">640767篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%87%ba%e7%89%88%e7%8a%b6%e6%80%81%3a%e6%ad%a3&f=publishState' title='正式出版论文'>
+                            <span class="arrow-right">></span>
+                            <span class="text">正式出版论文</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item publishState">
+                        <span class="unit">74篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%87%ba%e7%89%88%e7%8a%b6%e6%80%81%3a%e9%a2%84%e9%9d%9e&f=publishState' title='优先出版论文'>
+                            <span class="arrow-right">></span>
+                            <span class="text">优先出版论文</span>    
+                        </a>
+                    </p>
+                
+            
+    </div>
+</div>
+
+        
+<div class="md md-cluster">
+    <div class="hd clear">
+        
+        <span class="title">学科分类</span>
+    </div>
+    <div class="bd">
+        
+        
+                <p class="cluster-item tree-0 subjectCatagory">
+                    <span class="unit">280021篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22D*%22&f=subjectCatagory' title='政治、法律'>
+                        <span class="arrow-right">></span>
+                        <span class="text">政治、法律</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 subjectCatagory">
+                    <span class="unit">104802篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22F*%22&f=subjectCatagory' title='经济'>
+                        <span class="arrow-right">></span>
+                        <span class="text">经济</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 subjectCatagory">
+                    <span class="unit">63383篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22G*%22&f=subjectCatagory' title='文化、科学、教育、体育'>
+                        <span class="arrow-right">></span>
+                        <span class="text">文化、科学、教育、体育</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 subjectCatagory">
+                    <span class="unit">32270篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22R*%22&f=subjectCatagory' title='医药、卫生'>
+                        <span class="arrow-right">></span>
+                        <span class="text">医药、卫生</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 subjectCatagory">
+                    <span class="unit">28910篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22T*%22&f=subjectCatagory' title='工业技术'>
+                        <span class="arrow-right">></span>
+                        <span class="text">工业技术</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 subjectCatagory">
+                    <span class="unit">10838篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22C*%22&f=subjectCatagory' title='社会科学总论'>
+                        <span class="arrow-right">></span>
+                        <span class="text">社会科学总论</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 subjectCatagory">
+                    <span class="unit">8883篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22X*%22&f=subjectCatagory' title='环境科学、安全科学'>
+                        <span class="arrow-right">></span>
+                        <span class="text">环境科学、安全科学</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">7593篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22S*%22&f=subjectCatagory' title='农业科学'>
+                        <span class="arrow-right">></span>
+                        <span class="text">农业科学</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">6856篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22K*%22&f=subjectCatagory' title='历史、地理'>
+                        <span class="arrow-right">></span>
+                        <span class="text">历史、地理</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">5141篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22B*%22&f=subjectCatagory' title='哲学、宗教'>
+                        <span class="arrow-right">></span>
+                        <span class="text">哲学、宗教</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">4259篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22U*%22&f=subjectCatagory' title='交通运输'>
+                        <span class="arrow-right">></span>
+                        <span class="text">交通运输</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">3279篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22H*%22&f=subjectCatagory' title='语言、文字'>
+                        <span class="arrow-right">></span>
+                        <span class="text">语言、文字</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">3244篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22I*%22&f=subjectCatagory' title='文学'>
+                        <span class="arrow-right">></span>
+                        <span class="text">文学</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">1670篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22P*%22&f=subjectCatagory' title='天文学、地球科学'>
+                        <span class="arrow-right">></span>
+                        <span class="text">天文学、地球科学</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">1225篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22A*%22&f=subjectCatagory' title='马克思主义、列宁主义、毛泽东思想、邓小平理论'>
+                        <span class="arrow-right">></span>
+                        <span class="text">马克思主义、列宁主义、毛泽东思想、邓小平理论</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">1126篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22E*%22&f=subjectCatagory' title='军事'>
+                        <span class="arrow-right">></span>
+                        <span class="text">军事</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">1099篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22J*%22&f=subjectCatagory' title='艺术'>
+                        <span class="arrow-right">></span>
+                        <span class="text">艺术</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">585篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22O*%22&f=subjectCatagory' title='数理科学和化学'>
+                        <span class="arrow-right">></span>
+                        <span class="text">数理科学和化学</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">486篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22N*%22&f=subjectCatagory' title='自然科学总论'>
+                        <span class="arrow-right">></span>
+                        <span class="text">自然科学总论</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">329篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22Q*%22&f=subjectCatagory' title='生物科学'>
+                        <span class="arrow-right">></span>
+                        <span class="text">生物科学</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">313篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22V*%22&f=subjectCatagory' title='航空、航天'>
+                        <span class="arrow-right">></span>
+                        <span class="text">航空、航天</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item tree-0 more">
+                    <span class="unit">44篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e5%88%86%e7%b1%bb%e5%8f%b7%3a%22Z*%22&f=subjectCatagory' title='综合性图书'>
+                        <span class="arrow-right">></span>
+                        <span class="text">综合性图书</span>
+                    </a>
+                </p>
+            
+    </div>
+</div>
+
+        
+        
+        
+<div class="md md-cluster">
+    <div class="hd clear">
+        
+        <span class="expand" data-date="true">展开</span>
+        <span class="title">年份</span>
+    </div>
+    <div class="bd">
+        
+                <p class="cluster-item">
+                    <span class="unit">65937篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2018-2019&f=year'>
+                        <span class="arrow-right">></span>
+                        <span class="text">近一年</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item">
+                    <span class="unit">158287篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2016-2019&f=year'>
+                        <span class="arrow-right">></span>
+                        <span class="text">近三年</span>
+                    </a>
+                </p>
+            
+                <p class="cluster-item">
+                    <span class="unit">250004篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2014-2019&f=year'>
+                        <span class="arrow-right">></span>
+                        <span class="text">近五年</span>
+                    </a>
+                </p>
+            
+        
+                <p class="cluster-item more">
+                    <span class="unit">22702篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2019-2019&f=year'>
+                        <span class="arrow-right">></span>
+                        2019
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">43235篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2018-2018&f=year'>
+                        <span class="arrow-right">></span>
+                        2018
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">45598篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2017-2017&f=year'>
+                        <span class="arrow-right">></span>
+                        2017
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">46752篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2016-2016&f=year'>
+                        <span class="arrow-right">></span>
+                        2016
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">45635篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2015-2015&f=year'>
+                        <span class="arrow-right">></span>
+                        2015
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">46082篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2014-2014&f=year'>
+                        <span class="arrow-right">></span>
+                        2014
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">47336篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2013-2013&f=year'>
+                        <span class="arrow-right">></span>
+                        2013
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">43952篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2012-2012&f=year'>
+                        <span class="arrow-right">></span>
+                        2012
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">41948篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2011-2011&f=year'>
+                        <span class="arrow-right">></span>
+                        2011
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">38441篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2010-2010&f=year'>
+                        <span class="arrow-right">></span>
+                        2010
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">35318篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2009-2009&f=year'>
+                        <span class="arrow-right">></span>
+                        2009
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">31545篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2008-2008&f=year'>
+                        <span class="arrow-right">></span>
+                        2008
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">28715篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2007-2007&f=year'>
+                        <span class="arrow-right">></span>
+                        2007
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">27112篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2006-2006&f=year'>
+                        <span class="arrow-right">></span>
+                        2006
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">24864篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2005-2005&f=year'>
+                        <span class="arrow-right">></span>
+                        2005
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">21625篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2004-2004&f=year'>
+                        <span class="arrow-right">></span>
+                        2004
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">17302篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2003-2003&f=year'>
+                        <span class="arrow-right">></span>
+                        2003
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">14811篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2002-2002&f=year'>
+                        <span class="arrow-right">></span>
+                        2002
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">13341篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2001-2001&f=year'>
+                        <span class="arrow-right">></span>
+                        2001
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">3410篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a2000-2000&f=year'>
+                        <span class="arrow-right">></span>
+                        2000
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">623篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1999-1999&f=year'>
+                        <span class="arrow-right">></span>
+                        1999
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">330篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1998-1998&f=year'>
+                        <span class="arrow-right">></span>
+                        1998
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">13篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1997-1997&f=year'>
+                        <span class="arrow-right">></span>
+                        1997
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">11篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1996-1996&f=year'>
+                        <span class="arrow-right">></span>
+                        1996
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">10篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1995-1995&f=year'>
+                        <span class="arrow-right">></span>
+                        1995
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">8篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1994-1994&f=year'>
+                        <span class="arrow-right">></span>
+                        1994
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">10篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1993-1993&f=year'>
+                        <span class="arrow-right">></span>
+                        1993
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">7篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1992-1992&f=year'>
+                        <span class="arrow-right">></span>
+                        1992
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">15篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1991-1991&f=year'>
+                        <span class="arrow-right">></span>
+                        1991
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">7篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1990-1990&f=year'>
+                        <span class="arrow-right">></span>
+                        1990
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">6篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1989-1989&f=year'>
+                        <span class="arrow-right">></span>
+                        1989
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">9篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1988-1988&f=year'>
+                        <span class="arrow-right">></span>
+                        1988
+                    </a>
+                </p>
+            
+                <p class="cluster-item more">
+                    <span class="unit">8篇</span>
+                    <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%97%a5%e6%9c%9f%3a1987-1987&f=year'>
+                        <span class="arrow-right">></span>
+                        1987
+                    </a>
+                </p>
+            
+    </div>
+</div>
+
+        
+<div class="md md-cluster">
+    
+    <div class="hd clear">
+        
+        <span class="expand">展开</span>
+        
+        <span class="title">按刊分类</span>
+    </div>
+    <div class="bd">
+        
+                
+                
+                
+                    <p class="cluster-item kan">
+                        <span class="unit">24375篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3afzysh&f=kan' title='法制与社会'>
+                            <span class="arrow-right">></span>
+                            <span class="text">法制与社会</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item kan">
+                        <span class="unit">9122篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3aflysh&f=kan' title='法律与生活'>
+                            <span class="arrow-right">></span>
+                            <span class="text">法律与生活</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item kan">
+                        <span class="unit">4652篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3acsjsllyj&f=kan' title='城市建设理论研究（电子版）'>
+                            <span class="arrow-right">></span>
+                            <span class="text">城市建设理论研究（电子版）</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item kan">
+                        <span class="unit">3189篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3ahbfx&f=kan' title='河北法学'>
+                            <span class="arrow-right">></span>
+                            <span class="text">河北法学</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item kan">
+                        <span class="unit">3023篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3asq-zh&f=kan' title='商情'>
+                            <span class="arrow-right">></span>
+                            <span class="text">商情</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item kan">
+                        <span class="unit">2783篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3ashang&f=kan' title='商'>
+                            <span class="arrow-right">></span>
+                            <span class="text">商</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item kan">
+                        <span class="unit">2722篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3afzyjj&f=kan' title='法制与经济（上旬刊）'>
+                            <span class="arrow-right">></span>
+                            <span class="text">法制与经济（上旬刊）</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2629篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3ascxdh&f=kan' title='商场现代化'>
+                            <span class="arrow-right">></span>
+                            <span class="text">商场现代化</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2549篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3ajkgc&f=kan' title='金卡工程'>
+                            <span class="arrow-right">></span>
+                            <span class="text">金卡工程</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2447篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3azgjcg&f=kan' title='中国检察官'>
+                            <span class="arrow-right">></span>
+                            <span class="text">中国检察官</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2425篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3ajjyjdk&f=kan' title='经济研究导刊'>
+                            <span class="arrow-right">></span>
+                            <span class="text">经济研究导刊</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2422篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3afxzz&f=kan' title='法学杂志'>
+                            <span class="arrow-right">></span>
+                            <span class="text">法学杂志</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2374篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3azzyfl&f=kan' title='政治与法律'>
+                            <span class="arrow-right">></span>
+                            <span class="text">政治与法律</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2338篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3azgsf&f=kan' title='中国司法'>
+                            <span class="arrow-right">></span>
+                            <span class="text">中国司法</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2310篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3axll&f=kan' title='学理论'>
+                            <span class="arrow-right">></span>
+                            <span class="text">学理论</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2211篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3axdjjxx&f=kan' title='现代经济信息'>
+                            <span class="arrow-right">></span>
+                            <span class="text">现代经济信息</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2195篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3axzyf&f=kan' title='行政与法'>
+                            <span class="arrow-right">></span>
+                            <span class="text">行政与法</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2028篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3azsjjeqy&f=kan' title='知识经济'>
+                            <span class="arrow-right">></span>
+                            <span class="text">知识经济</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">2003篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3ahljszfglgbxyxb&f=kan' title='黑龙江省政法管理干部学院学报'>
+                            <span class="arrow-right">></span>
+                            <span class="text">黑龙江省政法管理干部学院学报</span>    
+                        </a>
+                    </p>
+                
+            
+                
+                
+                
+                    <p class="cluster-item more">
+                        <span class="unit">1942篇</span>
+                        <a href='?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK+%e6%9c%9f%e5%88%8aid%3aflkx&f=kan' title='法律科学－西北政法学院学报'>
+                            <span class="arrow-right">></span>
+                            <span class="text">法律科学－西北政法学院学报</span>    
+                        </a>
+                    </p>
+                
+            
+    </div>
+</div>
+
+    </div>
+
+            <div id="relatedword" class="md"></div>
+            
+    <div id="relatedResearchers" class="md"></div>
+    <div id="relatedVeinChart" class="md"></div>
+
+            
+
+<ul class="image_div">
+    <li><a href="http://www.rlzygl.com/zgh/" target="_blank">
+        <img src="http://ad.wanfangdata.com.cn/Images/160x35.gif" alt="《人力资源管理》杂志" /></a>
+    </li>
+    <li><a href="http://www.dgworld.com.cn/" target="_blank">
+        <img src="http://ad.wanfangdata.com.cn/Images/smsj.jpg" alt="数码世界" /></a>
+    </li> 
+<li><a id="ad_link" href="http://www.rlzygl.com/zgh/" target="_blank">
+<img alt="" id="ad_img" src ="http://ad.wanfangdata.com.cn/Images/160x35.gif" border ="0" onmouseover="timerstop();" onmouseout="timercontinue();"/>
+</a></li>  
+</ul>
+
+
+        </div>
+        <div class="right">
+            
+    
+<form id="filterForm" class="narraw-search narrow-item clear narraw-wf_qk" method="get">
+    <input class="input-item" placeholder="标题" data-value="" />
+    <input class="input-item" placeholder="作者" data-value="" />
+    <input class="input-item" placeholder="关键词" data-value="" />
+    
+    <input class="input-item" placeholder="刊名" data-value="" />
+    
+    <input class="input-item year begin-year" placeholder="起始年" maxlength="4" data-value="" />
+    <span class="year-to">-</span>
+    <input class="input-item year end-year" placeholder="结束年" maxlength="4" data-value="" />
+    <input type="hidden" id="filterBaseQuery" value="法律 DBID:WF_QK" />
+    <input type="hidden" id="q" name="q" />
+    <i class="icon icon-close iconfont">&#xe60b;</i>
+    <button class="narraw-search-btn btn" type="submit">
+        <i class="icon iconfont">&#xe604;</i>
+        <span class="text">在结果中检索</span>
+    </button>
+</form>
+
+
+    <div class="tab-sort clear">
+        <span class="limited-group clear">
+            <a href='http://s.wanfangdata.com.cn/Paper.aspx?q=%E6%B3%95%E5%BE%8B%20DBID%3AWF_QK&f=all' class='highlight_all'>全部</a>
+            
+                <a href='http://s.wanfangdata.com.cn/Paper.aspx?q=%E6%B3%95%E5%BE%8B%20DBID%3AWF_QK&f=onlyFull' class='common_all'>仅全文</a>
+            
+            
+                
+            
+        </span>
+                
+<span class="sortby narrow-item ">
+    <span class="lb">相关度优先<i class="icon iconfont icon-arrow-down">&#xe602;</i></span>
+    
+        <span class="sort-list">
+            <a href="http://s.wanfangdata.com.cn/Paper.aspx?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&f=sort&o=sortby+CitedCount+CoreRank+HasOriginalDoc+date%2fweight%3d5+relevance" title="新论文优先=论文出版时间+其他相关因素
+适用于追踪最新研究进展">新论文优先</a>
+            <a href="http://s.wanfangdata.com.cn/Paper.aspx?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&f=sort&o=sortby+CitedCount%2fweight%3d3+CoreRank+HasOriginalDoc+date+relevance%2fweight%3d5" title="经典论文优先=论文质量+其他相关因素
+适用于快速查找并获取研究与主题相关的高质量成果">经典论文优先</a>
+            
+                            <a href="http://s.wanfangdata.com.cn/Paper.aspx?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&f=sort&o=sortby+relevance" title="仅以论文关键词价值作为排序依据">仅相关度</a>
+                    
+                            <a href="http://s.wanfangdata.com.cn/Paper.aspx?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&f=sort&o=sortby+date" title="仅以出版时间作为排序依据">仅出版时间</a>
+                    
+                            <a href="http://s.wanfangdata.com.cn/Paper.aspx?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&f=sort&o=sortby+CitedCount" title="仅以被引次数作为排序依据">仅被引次数</a>
+                    
+        </span>
+</span>
+
+
+        
+    </div>
+    <div class="record-item-list">
+        
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">1.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_jhxk201703024.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/jhxk201703024' target="_blank">论民主之合法性与现代<em>法律</em>之科学基础</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-jhxk.aspx">《江海学刊》</a>
+            <span class="core">
+                <span title="被中信所《中国科技期刊引证报告》收录">ISTIC</span>
+                
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                <span title="被南京大学《核心期刊目录》收录">CSSCI</span>
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/jhxk/2017-3.aspx">2017年3期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=jhxk201703024&Name=%e9%9d%92%e7%bb%b4%e5%af%8c">青维富</a>
+        </div>
+        <div class="record-desc">
+            在西方法哲学发展的历史长河中,<em>法律</em>作为人类意志的表达,其合法性基础颇有争议.在西方法学界,<em>法律</em>尤其是实证法的合法性基础概而言之有三种叙事方式:一是实证法必须符合作为高级法背景之自然法才使其具有了合法性基础;二...<br />
+        </div>
+        <div class="record-keyword">
+            <span>民主合法性</span><span>法律正当性</span><span>法律正义</span><span>法律科学</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_jhxk201703024.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/论民主之合法性与现代法律之科学基础.aspx?ID=Periodical_jhxk201703024' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_jhxk201703024">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">2.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_shkxyj201603016.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/shkxyj201603016' target="_blank"><em>法律</em>感情探微</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-shkxyj.aspx">《社会科学研究》</a>
+            <span class="core">
+                <span title="被中信所《中国科技期刊引证报告》收录">ISTIC</span>
+                
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                <span title="被南京大学《核心期刊目录》收录">CSSCI</span>
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/shkxyj/2016-3.aspx">2016年3期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=shkxyj201603016&Name=%e9%83%ad%e6%99%af%e8%90%8d">郭景萍</a>
+        </div>
+        <div class="record-desc">
+            <em>法律</em>感情是一个有着特定内涵与外延的概念.它是人在与<em>法律</em>互动过程中形成的具有<em>法律</em>社会意义的情感态度和情感行动,是人的情感<em>法律</em>化的结果.从外延上<em>法律</em>感情涉及到人性本情、民情民意、情节情状和人情情面这四个维度.在法...<br />
+        </div>
+        <div class="record-keyword">
+            <span>法律感情</span><span>法律理性</span><span>法律世界</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_shkxyj201603016.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/法律感情探微.aspx?ID=Periodical_shkxyj201603016' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_shkxyj201603016">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">3.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_gjjyxzxyxb201609007.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/gjjyxzxyxb201609007' target="_blank">统一<em>法律</em>职业资格制度下法学教育的机遇、挑战与对策</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-gjjyxzxyxb.aspx">《国家教育行政学院学报》</a>
+            <span class="core">
+                <span title="被中信所《中国科技期刊引证报告》收录">ISTIC</span>
+                
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                <span title="被南京大学《核心期刊目录》收录">CSSCI</span>
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/gjjyxzxyxb/2016-9.aspx">2016年9期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=gjjyxzxyxb201609007&Name=%e5%bc%a0%e5%b3%b0%e6%8c%af">张峰振</a><a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=gjjyxzxyxb201609007&Name=%e6%af%9b%e5%ae%81%e4%bb%99">毛宁仙</a>
+        </div>
+        <div class="record-desc">
+            中央深改组通过的完善国家统一<em>法律</em>职业资格制度的具体制度和措施,为法学教育带来了发展机遇.但封闭的法学教育体系、轻视<em>法律</em>职业技能、忽略<em>法律</em>职业伦理的培养模式无法承载统一<em>法律</em>职业资格制度赋予法学教育的重任.为此...<br />
+        </div>
+        <div class="record-keyword">
+            <span>统一法律职业资格制度</span><span>法学教育</span><span>法律职业技能</span><span>法律职业伦理</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_gjjyxzxyxb201609007.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/统一法律职业资格制度下法学教育的机遇、挑战与对策.aspx?ID=Periodical_gjjyxzxyxb201609007' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_gjjyxzxyxb201609007">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">4.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_llxyj201705016.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/llxyj201705016' target="_blank">论<em>法律</em>服从的多重辩护</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-llxyj.aspx">《伦理学研究》</a>
+            <span class="core">
+                <span title="被中信所《中国科技期刊引证报告》收录">ISTIC</span>
+                
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                <span title="被南京大学《核心期刊目录》收录">CSSCI</span>
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/llxyj/2017-5.aspx">2017年5期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=llxyj201705016&Name=%e5%bc%a0%e7%a7%80">张秀</a>
+        </div>
+        <div class="record-desc">
+            在现代国家法治化进程中,公民服从<em>法律</em>是一项政治义务,而不是单纯的<em>法律</em>义务.公民不是简单地服从<em>法律</em>,而是能独立运用自己的理性辨认和确认<em>法律</em>的正当性,在服从<em>法律</em>的过程中推进法治的健全与完善.因此,在现代国家推进法...<br />
+        </div>
+        <div class="record-keyword">
+            <span>法律服从</span><span>自愿性</span><span>法律正义</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_llxyj201705016.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/论法律服从的多重辩护.aspx?ID=Periodical_llxyj201705016' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_llxyj201705016">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">5.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_scsfdxxb-shkxb201706004.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/scsfdxxb-shkxb201706004' target="_blank">论作为<em>法律</em>修改方式的<em>法律</em>修正案</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-scsfdxxb-shkxb.aspx">《四川师范大学学报（社会科学版）》</a>
+            <span class="core">
+                
+                
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                <span title="被南京大学《核心期刊目录》收录">CSSCI</span>
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/scsfdxxb-shkxb/2017-6.aspx">2017年6期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=scsfdxxb-shkxb201706004&Name=%e5%ad%94%e5%be%b7%e7%8e%8b">孔德王</a>
+        </div>
+        <div class="record-desc">
+            作为我国<em>法律</em>修改的重要方式,<em>法律</em>修正案兼顾了<em>法律</em>的稳定性和适应性,一方面能够确保<em>法律</em>的稳定和权威,另一方面能够根据社会需要适时更新<em>法律</em>的内容.但是,我国目前以修正案的方式修改<em>法律</em>存在适用条件不明确、法条序号设...<br />
+        </div>
+        <div class="record-keyword">
+            <span>法律修正案</span><span>法律修改方式</span><span>宪法修正案</span><span>刑法修正案</span><span>法律修改</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_scsfdxxb-shkxb201706004.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/论作为法律修改方式的法律修正案.aspx?ID=Periodical_scsfdxxb-shkxb201706004' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_scsfdxxb-shkxb201706004">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">6.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_xbdxxb-zxsh201701014.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/xbdxxb-zxsh201701014' target="_blank"><em>法律</em>与道德的张力——兼论现代西方法哲学的内在困境</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-xbdxxb-zxsh.aspx">《西北大学学报（哲学社会科学版）》</a>
+            <span class="core">
+                <span title="被中信所《中国科技期刊引证报告》收录">ISTIC</span>
+                
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                <span title="被南京大学《核心期刊目录》收录">CSSCI</span>
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/xbdxxb-zxsh/2017-1.aspx">2017年1期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=xbdxxb-zxsh201701014&Name=%e4%b8%81%e7%a4%be%e6%95%99">丁社教</a>
+        </div>
+        <div class="record-desc">
+            从亚里士多德将道德作为<em>法律</em>的基础,到康德把<em>法律</em>作为道德之力有不逮的补充,体现出基于城邦群体的道德到基于个人意志的道德的转变,蕴含着<em>法律</em>去道德化和<em>法律</em>世俗化、<em>法律</em>科学化的内在逻辑,功利主义法学、分析法学实现了法...<br />
+        </div>
+        <div class="record-keyword">
+            <span>法律</span><span>道德</span><span>张力</span><span>道德法律化</span><span>法律去道德化</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_xbdxxb-zxsh201701014.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/法律与道德的张力——兼论现代西方法哲学的内在困境.aspx?ID=Periodical_xbdxxb-zxsh201701014' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_xbdxxb-zxsh201701014">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">7.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_gjstx98201608015.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/gjstx98201608015' target="_blank">专利<em>法律</em>价值评估研究</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-gjstx98.aspx">《高技术通讯》</a>
+            <span class="core">
+                <span title="被中信所《中国科技期刊引证报告》收录">ISTIC</span>
+                <span title="被EI收录">EI</span>
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/gjstx98/2016-8.aspx">2016年8期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=gjstx98201608015&Name=%e6%9d%a8%e6%80%9d%e6%80%9d">杨思思</a><a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=gjstx98201608015&Name=%e6%b1%aa%e4%b8%80%e5%90%8d">汪一名</a><a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=gjstx98201608015&Name=%e9%99%88%e8%88%aa">陈航</a><a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=gjstx98201608015&Name=%e5%91%a8%e7%ab%8b%e5%a8%9f">周立娟</a><a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=gjstx98201608015&Name=%e6%9d%8e%e6%9f%8f%e5%bf%97">李柏志</a><a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=gjstx98201608015&Name=%e6%88%b4%e7%a3%8a">戴磊</a>
+        </div>
+        <div class="record-desc">
+            建立了专利价值评估指标体系,按照其中的11项评价指标,对吉林省2014-2015年机械工程领域授权有效发明专利进行了专利评估和专利市场转化价值分析,获得了可能有市场转化前景的价值专利.阐述了专利价值评估的重要性,指出专...<br />
+        </div>
+        <div class="record-keyword">
+            <span>专利价值</span><span>法律</span><span>评估</span><span>指标体系</span><span>patent value</span><span>law</span><span>evaluation</span><span>index system</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_gjstx98201608015.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/专利法律价值评估研究.aspx?ID=Periodical_gjstx98201608015' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_gjstx98201608015">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">8.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_hbshkx201710023.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/hbshkx201710023' target="_blank">司法权威与公众<em>法律</em>信任关系阐析</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-hbshkx.aspx">《湖北社会科学》</a>
+            <span class="core">
+                <span title="被中信所《中国科技期刊引证报告》收录">ISTIC</span>
+                
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                <span title="被南京大学《核心期刊目录》收录">CSSCI</span>
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/hbshkx/2017-10.aspx">2017年10期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=hbshkx201710023&Name=%e9%83%91%e6%99%93%e8%8b%b1">郑晓英</a>
+        </div>
+        <div class="record-desc">
+            &quot;辱母杀人案&quot;一审判决书公布的<em>法律</em>事实及判决结果引发公众强烈质疑,暴露出了当前公众<em>法律</em>信任与司法权威之间存在的严重断裂现象.公众判意中理性因素与非理性因素的复杂交织、当下司法无法胜任适格的权力信源角色是形成...<br />
+        </div>
+        <div class="record-keyword">
+            <span>司法权威</span><span>法律信任</span><span>公众质疑</span><span>法律传播</span><span>理性</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_hbshkx201710023.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/司法权威与公众法律信任关系阐析.aspx?ID=Periodical_hbshkx201710023' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_hbshkx201710023">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">9.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_shkxyj201702008.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/shkxyj201702008' target="_blank">现代社会理论视野下的动态<em>法律</em>论</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-shkxyj.aspx">《社会科学研究》</a>
+            <span class="core">
+                <span title="被中信所《中国科技期刊引证报告》收录">ISTIC</span>
+                
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                <span title="被南京大学《核心期刊目录》收录">CSSCI</span>
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/shkxyj/2017-2.aspx">2017年2期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=shkxyj201702008&Name=%e9%9d%92%e7%bb%b4%e5%af%8c">青维富</a>
+        </div>
+        <div class="record-desc">
+            <em>法律</em>研究与社会理论之间的关系总是以矛盾的方式而存在,且常常令人难以清晰地厘定.本文要阐释的主题是,造成<em>法律</em>研究与社会理论之间关系的矛盾和<em>法律</em>作为一种重要的社会现象而被社会理论所思考的原因何在,以及当下社会理...<br />
+        </div>
+        <div class="record-keyword">
+            <span>法社会学</span><span>社会理论</span><span>法律研究</span><span>法律国际化</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_shkxyj201702008.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/现代社会理论视野下的动态法律论.aspx?ID=Periodical_shkxyj201702008' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_shkxyj201702008">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+
+<div class="record-item">
+    <div class="left-record">
+        <div class="record-title">
+            <span class="index">10.</span>
+            <a class='fulltext' href='http://f.wanfangdata.com.cn/download/Periodical_gszfxyxb201705012.aspx' target="_blank">全文</a>
+            <a class="title" href='http://d.old.wanfangdata.com.cn/Periodical/gszfxyxb201705012' target="_blank"><em>法律</em>金融学理论——印度反例研究与中国借鉴</a>
+            <span class="cited"></span>
+            
+        </div>
+        <div class="record-subtitle">
+            [期刊论文]&nbsp;
+        <a href="http://c.old.wanfangdata.com.cn/Periodical-gszfxyxb.aspx">《甘肃政法学院学报》</a>
+            <span class="core">
+                <span title="被中信所《中国科技期刊引证报告》收录">ISTIC</span>
+                
+                
+                <span title="被北京大学《中文核心期刊要目总览》收录">PKU</span>
+                <span title="被南京大学《核心期刊目录》收录">CSSCI</span>
+            </span>-<a href="http://c.old.wanfangdata.com.cn/periodical/gszfxyxb/2017-5.aspx">2017年5期</a>
+            <a class="creator" target='_blank' href="http://social.old.wanfangdata.com.cn/Locate.ashx?ArticleId=gszfxyxb201705012&Name=%e9%99%88%e7%86%b9">陈熹</a>
+        </div>
+        <div class="record-desc">
+            “<em>法律</em>与金融”论是诞生于美国的新兴交叉学科,试图以各国的<em>法律</em>渊源、法系与投资者保护<em>法律</em>水平之高下,来解释各国金融发展水平的差异.而其反对者亦提出“政治选择”、“行业结构”决定论等理论加以反驳.本文将以印度这一普通法...<br />
+        </div>
+        <div class="record-keyword">
+            <span>法律与金融</span><span>印度金融</span><span>印度法律</span><span>个例研究</span>
+        </div>
+    </div>
+    <div class="record-action-link">
+        
+        <a class="download" href='http://f.wanfangdata.com.cn/download/Periodical_gszfxyxb201705012.aspx' target="_blank">
+            <i class="icon iconfont icon-download">&#xe605;</i>
+            <span class="text">下载全文</span>
+        </a>
+        <a class="view" href='http://f.wanfangdata.com.cn/view/法律金融学理论——印度反例研究与中国借鉴.aspx?ID=Periodical_gszfxyxb201705012' target="_blank">
+            <i class="icon iconfont icon-view">&#xe606;</i>
+            <span class="text">查看全文</span>
+        </a>
+        
+        <a class="export exportLink" data-resourceId="Periodical_gszfxyxb201705012">
+            <i class="icon iconfont icon-export">&#xe607;</i>
+            <span class="text">导出</span>
+        </a>
+    </div>
+</div>
+
+<p class="pager">
+    <span id="ctl00_RightPlaceHolder_ctl03_PagerControl1" class="page_link">1/64085</span>&nbsp;&nbsp;<strong class="page-selected">1</strong><a href="?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&amp;f=top&amp;p=2" class="page">2</a>&nbsp;&nbsp;<a href="?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&amp;f=top&amp;p=3" class="page">3</a>&nbsp;&nbsp;<a href="?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&amp;f=top&amp;p=4" class="page">4</a>&nbsp;&nbsp;<a href="?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&amp;f=top&amp;p=5" class="page">5</a>&nbsp;&nbsp;<a href="?q=%e6%b3%95%e5%be%8b+DBID%3aWF_QK&amp;f=top&amp;p=2" class="page">下一页&gt;&gt;</a>&nbsp;&nbsp;
+</p>
+    </div>
+
+
+        </div>
+    </div><div class="footer-wrap">
+        <div class="lt-bg"></div>
+        <div class="rt-bg"></div>
+        <div class="footer clear">
+            <div class="lt">
+                <div class="top">
+                    <a target="_blank" href="http://old.wanfangdata.com.cn/NewGuide">帮助</a>
+                    <a target="_blank" href="http://old.wanfangdata.com.cn/CustomerService/Services">客户服务</a>
+                    <a target="_blank" href="https://www.wjx.cn/jq/13061070.aspx">问卷调查</a>
+                    <a target="_blank" href="http://old.wanfangdata.com.cn/AboutUs/index">关于我们</a>
+                    <a target="_blank" href="http://www.wanfang.com.cn/">公司首页</a>
+                    <a target="_blank" href="http://weibo.com/wanfangdata">平台微博</a>
+                    <a target="_blank" href="http://www.hotjob.cn/wt/wanfangdata/web/index">加入我们</a>
+                    <a target="_blank" href="http://old.wanfangdata.com.cn/Sitemap">网站地图</a>
+                    <a id="langCN" data-lang="zn-CN" class="lang">简</a>
+                    <a id="langTW" data-lang="zn-TW" class="lang">繁</a>
+                    <a id="langEN" data-lang="EN" href="http://www.wanfangdata.com/" target="_blank">ENG</a>
+                </div>
+                <div class="bottom">
+                    <div>
+                        <a target="_blank" href="http://ad.wanfangdata.com.cn/images/hlwcb.jpg">网络出版服务许可证：(总)网出证(京)字096号</a>
+                        <a target="_blank" href="http://ad.wanfangdata.com.cn/images/zhengshu_2.jpg">互联网药品信息服务资格证书号：(京)-经营性-2016-0015</a>
+                        <a target="_blank" href="http://ad.wanfangdata.com.cn/images/stjmxkz2.jpg">信息网络传播视听节目许可证 许可证号：0108284 </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="http://ad.wanfangdata.com.cn/images/icp.jpg">京ICP证：010071</a>
+                        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020237" ><img src="http://ad.wanfangdata.com.cn/images/gabeian.png" style="margin-right:2px;"/>京公网安备11010802020237号</a>
+<a target="_blank" href="http://ad.wanfangdata.com.cn/images/wfdatazs.jpg">万方数据学术资源发现服务系统[简称：万方智搜]V1.0  证书号：软著登字第2255655号</a>
+                    </div>
+                    <p>万方数据知识服务平台--国家科技支撑计划资助项目（编号：2006BAH03B01）©北京万方数据股份有限公司  万方数据电子出版社</p>
+                </div>
+            </div>
+            <div class="rt">
+                <div class="top">
+                    <i class="icon icon-service"></i>
+                    <span>联系客服</span>
+                </div>
+                <ul class="contactus">
+                             <li><i class="contactus-online"></i><a onclick="onlineService('http://old.wanfangdata.com.cn/')">在线客服</a></li>
+                             <li><i class="contactus-tel"></i>4000115888</li>
+                             <li><i class="contactus-email"></i>service@wanfangdata.com.cn</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" charset="utf-8" src="http://static.wanfangdata.com.cn/wfks/js/wf.service-1.3.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7a2dabc2bbc032dd755e4d20d738e185";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>           
+    <textarea style="display: none" id="headerecho">法律</textarea>
+    <script type="text/javascript" src="http://static.wanfangdata.com.cn/wfks/lib/jquery-1.11.3.min.js"></script>
+    
+    <script>$('.header .search-input').val($('#headerecho').text());</script>
+    <script type="text/javascript" src="http://static.wanfangdata.com.cn/wfks/lib/jquery-ui-1.11.4.custom.min.js"></script>
+    <script type="text/javascript" src="http://static.wanfangdata.com.cn/wfks/lib/jquery.flot.min.js"></script>
+    <!--[if lt IE 9 ]><script type="text/javascript" src="http://static.wanfangdata.com.cn/wfks/lib/json2.min.js"></script><![endif]-->
+    <!--[if lte IE 8]><script type="text/javascript" src="http://static.wanfangdata.com.cn/wfks/lib/excanvas.min.js"></script><![endif]-->
+    <script type="text/javascript" src="http://old.wanfangdata.com.cn/Config/index"></script>
+    <script type="text/javascript" src="http://static.wanfangdata.com.cn/wfks/js/global.min.js?v=201704270918"></script>
+    <script type="text/javascript">
+        (function () {
+            var $fileterForm = $('#filterForm');
+            wf.header.resource.init({ id: 'qk', isSearch: true });
+            wf.header.search.init({ activeSearchField: true });//激活字段提示,默认切换资源时激活
+            $('.cluster .expand').click(function () {
+                var $this = $(this),
+                    $bd = $this.parent().next('.bd'),
+                    $more = $bd.find('.more'),
+                    isShow = $this.hasClass('show');
+                $more[isShow ? 'fadeOut' : 'fadeIn'](300);
+                $this.text(isShow ? '展开' : '收起').toggleClass('show');
+                if ($this.data('date')) {
+                    $bd.find('.cluster-item')
+                        .not('.more')[isShow ? 'show' : 'hide']();
+                }
+            });
+            $('.content-search input[placeholder]').each(function (i, item) { $(item).watermark($(item).attr('placeholder')); });
+            $fileterForm.searchFilter({ fieldAttr: 'placeholder' });
+            $fileterForm.find('.icon-close').click(function () { $fileterForm.removeClass(SHOW_CLS); });
+            $('.content .left').css({ 'min-height': $('.content').height() });
+            $('.image_div li a').click(function (e) {//广告点击日志 todo:广告移动到新闻系统
+                var banner = document.location.href.toLocaleLowerCase().indexOf("http://s.wanfangdata.com.cn/".toLocaleLowerCase()) === 0 ? "S检索列表" : "D详情页";
+                config.log.add(this, banner, config.auth.cookieName);
+            });
+            wf.exporter.init();
+            wf.fixbox.init();
+            
+        })();
+    </script>
+    
+    <script type="text/javascript">
+        (function(wf){
+            wf.related.veinChart.render('relatedVeinChart','法律');
+            wf.related.researchers.render('relatedResearchers', ["法律"], false);
+            $('.btn-thesisCatalog').click(function () {
+                $(this).next().show();
+                $('html').css({ 'overflow-y': 'hidden' });
+            });
+        })(wf);
+        $.ajax({
+            url: 'HuDongRelatedWord.aspx',
+            type: 'POST',
+            data: { word: '法律' },
+            success: function (data) {
+                $('#hudongwords').html(data).show();
+            },
+            error: function (stat) {
+                if (window.console != undefined) {
+                    console.log(stat);
+                }
+            }
+        });
+    </script>
+
+    
+        <script type="text/javascript">
+            wf.related.word.render('relatedword', '%e6%b3%95%e5%be%8b', 'Paper.aspx');
+        </script>
+    
+    
+    <script type="text/javascript" src="http://static.wanfangdata.com.cn/wfks/module/userSuggestion/userSuggestion.min.js?v=201704270918"></script>
+</body>
+</html>
